@@ -1,0 +1,97 @@
+$max-font-size: 30;
+
+@for $i from 1 through $max-font-size {
+    .fz--#{$i} {
+      font-size: #{$i}px;
+    }
+}
+
+// --- COLOR --- //
+.color{
+    &--white{
+        color: $color-white;
+    }
+    &--grey{
+        color: $color-grey;
+    }
+    &--black{
+        color: $color-black;
+    }
+    &--pink{
+        color:$color-pink;
+        &-light{
+            color: $color-pink-light;
+        }
+        &-medium{
+            color: $color-pink-medium;
+        }
+        &-dark{
+            color: $color-pink-dark;
+        }
+    }
+    &--blue{
+        color: $color-blue;
+        &-light{
+            color: $color-blue-light;
+        }
+        &-medium{
+            color: $color-blue-medium;
+        }
+        &-dark{
+            color: $color-blue-dark;
+        }
+    }
+    &--purple{
+        &-medium{
+            color: $color-purple-medium;
+        }
+        &-dark{
+            color: $color-purple-dark;
+        }
+    }
+}
+
+// --- BACKGROUND COLOR --- //
+.background-color{
+    &--white{
+        background-color: $color-white;
+    }
+    &--grey{
+        background-color: $color-grey;
+    }
+    &--black{
+        background-color: $color-black;
+    }
+    &--pink{
+        background-color:$color-pink;
+        &-light{
+            background-color: $color-pink-light;
+        }
+        &-medium{
+            background-color: $color-pink-medium;
+        }
+        &-dark{
+            background-color: $color-pink-dark;
+        }
+    }
+    &--blue{
+        background-color: $color-blue;
+        &-light{
+            background-color: $color-blue-light;
+        }
+        &-medium{
+            background-color: $color-blue-medium;
+        }
+        &-dark{
+            background-color: $color-blue-dark;
+        }
+    }
+    &--purple{
+        &-medium{
+            background-color: $color-purple-medium;
+        }
+        &-dark{
+            background-color: $color-purple-dark;
+        }
+    }
+}

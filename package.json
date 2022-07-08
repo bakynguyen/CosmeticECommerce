@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-web",
+  "version": "1.0.0",
+  "description": "A E-commerce Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quynh Tran",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+}

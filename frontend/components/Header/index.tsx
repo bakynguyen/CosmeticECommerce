@@ -68,7 +68,7 @@ const Header: React.FC<Props> = (props) => {
           </ul>
         </div>
         <div className="flex items-center gap-4 w-1/6">
-          <div>Search</div>
+          <div></div>
           <div>
             <IconGi.GiUsaFlag />
           </div>

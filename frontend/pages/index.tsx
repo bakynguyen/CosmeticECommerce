@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import { Input } from "antd";
+
 export default function Home({ products }) {
   // console.log("products", products);
   return (
@@ -9,7 +11,8 @@ export default function Home({ products }) {
         <meta name="keywords" content="Web developing" />
         {/* <link href="/dist/output.css" rel="stylesheet" /> */}
       </Head>
-      <h1 className="text-red-500">Welcome</h1>
+      <h1 className="text-red-500">Welcomeaa</h1>
+      <Input placeholder="Search" />
       <div>abc</div>
     </div>
   );

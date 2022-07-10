@@ -1,0 +1,33 @@
+.input-comp {
+  input {
+    height: 2rem;
+    border: 0.0625rem solid $color-grey-medium;
+    border-radius: 1.25rem;
+    font-size: 0.75rem;
+    padding: 0.625rem 1.25rem;
+    width: 100%;
+    &:hover {
+      border-color: $color-grey-medium;
+    }
+    &:focus {
+      border: 2px solid $color-black;
+      border-radius: 1.25rem;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &--icon {
+    position: relative;
+    input {
+      padding: 0.625rem 1.25rem 0.625rem 2rem;
+    }
+    svg {
+      position: absolute;
+      z-index: 1;
+      left: 15px;
+      top: 27%;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

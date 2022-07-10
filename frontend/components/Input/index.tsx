@@ -1,22 +1,24 @@
 import { Input } from "antd";
 
 interface Props {
-  style?: Object;
   placeholder?: String;
   icon?: {
-    element: React.FC;
+    element: new () => React.Component<any, any>;
     position: "left" | "right";
   };
 }
 
-const Input: React.FC<Props> = (props) => {
-  const { style, placeholder = "", icon } = props;
+const InputComp: React.FC<Props> = ({
+  placeholder = "",
+  icon,
+  ...props
+}: Props) => {
   return (
-    <div>
+    <div className={`input-comp ${icon && "input-comp--icon"}`}>
       {icon && <icon.element />}
-      <Input placeholder={placeholder} style={style} />
+      <Input {...props} placeholder={placeholder} />
     </div>
   );
 };
 
-export default Input;
+export default InputComp;

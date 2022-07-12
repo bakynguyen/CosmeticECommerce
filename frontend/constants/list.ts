@@ -2,9 +2,11 @@
 export const HeaderList = {
   pink: {
     url: "/",
+    page: "pink",
     topContent: { fontBold: "PINK", fontLight: "" },
     backgroundColor: "white",
     borderColor: "black",
+    textColor: "black",
     tag: {
       bigTag: "PINK",
       smallTag: "PINK COSMETICS",
@@ -28,12 +30,14 @@ export const HeaderList = {
   },
   pinkCosmetics: {
     url: "/pink-cosmetics",
+    page: "pinkCosmetics",
     topContent: { fontBold: "PINK COSMETICS", fontLight: "" },
     backgroundColor: "black",
     borderColor: "white",
+    textColor: "white",
     tag: {
-      bigTag: "PINK COSMETICS",
-      smallTag: "",
+      bigTag: "PINK",
+      smallTag: "PINK COSMETICS",
     },
     list: [
       { main: "GLOSS & GLOW", mainColor: "pink", items: [] },
@@ -54,11 +58,13 @@ export const HeaderList = {
   },
   pinkSkin: {
     url: "/pink-skin",
+    page: "pinkSkin",
+    textColor: "black",
     topContent: { fontBold: "PINK", fontLight: "SKIN" },
     backgroundColor: "pink",
     borderColor: "white",
     tag: {
-      bigTag: "PINKSKIN",
+      bigTag: "PINK",
       smallTag: "PINK COSMETICS",
     },
     list: [
@@ -75,11 +81,13 @@ export const HeaderList = {
   },
   pinkBaby: {
     url: "/pink-baby",
+    page: "pinkBaby",
+    textColor: "grey-dark",
     topContent: { fontBold: "PINK", fontLight: "BABY" },
     backgroundColor: "blue",
     borderColor: "white",
     tag: {
-      bigTag: "PINKBABY",
+      bigTag: "PINK",
       smallTag: "PINK COSMETICS",
     },
     list: [

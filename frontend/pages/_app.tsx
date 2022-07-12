@@ -1,12 +1,12 @@
-import Layout from "../components/Layout";
+import UserLayout from "@components/UserLayout";
 import "antd/dist/antd.css";
 import "../styles/styles.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <UserLayout>
       <Component {...pageProps} />
-    </Layout>
+    </UserLayout>
   );
 }
 

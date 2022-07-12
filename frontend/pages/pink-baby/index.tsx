@@ -1,27 +1,24 @@
 import Head from "next/head";
-import Image from "next/image";
-import banner1 from "@styles/images/banner-1.png";
-import ButtonComp from "@components/Button";
-import Card from "@components/Card";
 
-export default function Home({ products }) {
+interface Props {
+  products: any;
+}
+const PinkBaby: React.FC<Props> = (props) => {
+  // console.log("products", products);
   return (
     <div>
       <Head>
         <title>WebDev</title>
         <meta name="keywords" content="Web developing" />
+        {/* <link href="/dist/output.css" rel="stylesheet" /> */}
       </Head>
-      <div>
-        <div className="w-full h-[750px]">
-          <Image src={banner1} alt="Pink banner" />
-        </div>
-        <div>
-          <Card />
-        </div>
-      </div>
+      <h1 className="text-red-500">PinkBaby</h1>
+      <div>abc</div>
     </div>
   );
-}
+};
+
+export default PinkBaby;
 
 export const getStaticProps = async () => {
   let products = [];

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as IconGi from "react-icons/gi";
@@ -11,26 +12,36 @@ interface Props {}
 
 const Header: React.FC<Props> = (props) => {
   const router = useRouter();
-
+  const [currentPageObj, setCurrentPageObj] = useState(HeaderList["pink"]);
+  console.log("currentPageObj", currentPageObj);
   return (
-    <div>
+    <div className="fixed w-full z-10">
       <div className="grid grid-cols-4 grid-rows-1 cursor-pointer h-5 sm:h-10 md:h-10 lg:h-10 leading-5 sm:leading-10 md:leading-10 lg:leading-10 fz--10 sm:text-xs md:text-sm lg:text-base text-center font-bold">
         {Object.values(HeaderList).map((item) => (
-          <a
+          <div
+            key={item.page}
             className={`background-color--${item.backgroundColor} color--${item.borderColor}`}
-            href={item.url}
+            // href={item.url}
+            onClick={() => {
+              router.push(item.url);
+              setCurrentPageObj(HeaderList[item.page]);
+            }}
           >
             {item.topContent.fontBold}
             <span className="font-light">{item.topContent.fontLight}</span>
-          </a>
+          </div>
         ))}
       </div>
-      <div className="flex items-center h-24 border-b-2 border-black background-color--pink pr-2">
-        <div className="text-center w-1/6">
-          <div className="text-6xl font-bold">PINK</div>
-          <div className="text-xs">PINK COSMETICS</div>
+      <div
+        className={`flex items-center h-24 border-b-2 border-${currentPageObj.borderColor} background-color--${currentPageObj.backgroundColor} pr-2`}
+      >
+        <div
+          className={`text-center color--${currentPageObj.borderColor} w-1/6`}
+        >
+          <div className="text-6xl font-bold">{currentPageObj.tag.bigTag}</div>
+          <div className="text-xs">{currentPageObj.tag.smallTag}</div>
         </div>
-        <div className="w-4/6">
+        <div className={`color--${currentPageObj.textColor} w-4/6`}>
           <ul className="flex gap-4 fz--9 sm:text-xs md:text-sm lg:text-sm font-semibold">
             <li>
               <Link href="/">
@@ -72,13 +83,19 @@ const Header: React.FC<Props> = (props) => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center gap-3 w-1/6">
-          <div>
+        <div
+          className={`color--${currentPageObj.textColor} flex items-center gap-3 w-1/6`}
+        >
+          <div
+            className={`${
+              currentPageObj.textColor === "white" ? "color--black" : ""
+            }`}
+          >
             <InputComp
               placeholder="SEARCH"
               icon={{ element: IconIo.IoIosSearch, position: "left" }}
               style={{
-                border: "none",
+                border: currentPageObj.backgroundColor !== "white" && "none",
               }}
             />
           </div>

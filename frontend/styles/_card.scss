@@ -1,0 +1,39 @@
+.card {
+  position: relative;
+  background-color: $color-white;
+  border: 0.0625rem solid $color-grey-light;
+  &-tag {
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 0.625rem;
+    left: 0;
+    padding: 0.3125rem 0.625rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0.9375rem;
+    z-index: 1;
+  }
+  &-img {
+  }
+  &-content {
+    min-height: 11.25rem;
+    padding: 1rem 0.9375rem;
+    text-align: center;
+  }
+  &-title {
+  }
+  &-price {
+    &--discount {
+    }
+    &--original {
+    }
+  }
+  &-rating {
+    &-star {
+    }
+    &-point {
+    }
+  }
+  &-button {
+  }
+}
